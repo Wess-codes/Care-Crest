@@ -10,7 +10,7 @@ export default function AboutUsPage() {
       <section className="relative h-[100vh] w-full flex justify-center items-center overflow-hidden">
         <div className="w-[90%] h-full relative rounded-xl shadow-lg overflow-hidden">
           <Image
-            src="/se18.jpeg" // Replace with your actual image path
+            src="/se18.jpg" // Replace with your actual image path
             alt="Our dedicated care team"
             fill
             className="object-cover object-center"

@@ -8,13 +8,13 @@ const features = [
     icon: <HeartHandshake className="h-8 w-8 text-primary" />,
     title: "Compassion First",
     description: "We treat every client with respect, love, and dignity.",
-    image: "/image1.jpeg",
+    image: "/image1.jpg",
   },
   {
     icon: <UserCheck className="h-8 w-8 text-primary" />,
     title: "Skilled Professionals",
     description: "Certified caregivers trained for elder and specialized care.",
-    image: "/image2.jpeg",
+    image: "/image2.jpg",
   },
   {
     icon: <ShieldCheck className="h-8 w-8 text-primary" />,

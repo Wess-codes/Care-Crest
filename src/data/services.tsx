@@ -52,7 +52,7 @@ import {
       slug: "disability-support",
       title: "Disability Support",
       icon: <Accessibility className="h-8 w-8 text-primary" />,
-      image: "/image4.jpeg",
+      image: "/image4.jpg",
       description:
         "We assist clients living with physical or cognitive challenges to thrive independently.",
       details: [

@@ -28,7 +28,7 @@ export default function HeroSection() {
         {/* Image */}
         <div className="relative w-full md:w-3/5 h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-lg">
           <Image
-            src="/hero.jpeg"
+            src="/hero.jpg"
             alt="Caring nurse helping elderly woman"
             className="object-cover"
             fill
