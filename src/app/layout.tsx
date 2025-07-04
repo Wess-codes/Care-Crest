@@ -22,13 +22,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`flex flex-col min-h-screen ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`flex flex-col min-h-screen bg-background text-foreground ${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         <TopBar />
         <Navbar />

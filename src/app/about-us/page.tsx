@@ -1,4 +1,3 @@
-// src/app/about-us/page.tsx
 "use client";
 
 import Image from "next/image";
@@ -6,7 +5,7 @@ import { Quote } from "lucide-react";
 
 export default function AboutUsPage() {
   return (
-    <div className="bg-white">
+    <div className="bg-white font-sans">
       {/* Hero Section with Image */}
       <section className="relative h-[100vh] w-full flex justify-center items-center overflow-hidden">
         <div className="w-[90%] h-full relative rounded-xl shadow-lg overflow-hidden">
@@ -28,17 +27,17 @@ export default function AboutUsPage() {
 
         <p className="text-lg md:text-xl text-muted mb-6">
           At <span className="text-primary font-semibold">Care Crest</span>, we believe that every individual
-          deserves personalized, respectful, and compassionate care — right in the comfort of their home.
+          deserves personalized, respectful, and compassionate care &mdash; right in the comfort of their home.
         </p>
 
         <p className="text-md md:text-lg text-gray-600 mb-6">
           Our dedicated team of trained caregivers, nurses, and support staff work tirelessly
           to deliver professional health support, daily living assistance, and emotional care to those in need.
-          Whether it’s elderly assistance, disability support, or recovery help — we’re here for your family.
+          Whether it&apos;s elderly assistance, disability support, or recovery help &mdash; we&apos;re here for your family.
         </p>
 
         <p className="text-md md:text-lg text-gray-600">
-          We’re not just caregivers — we’re trusted companions, reliable health partners,
+          We&apos;re not just caregivers &mdash; we&apos;re trusted companions, reliable health partners,
           and members of your extended family.
         </p>
       </section>
@@ -48,10 +47,10 @@ export default function AboutUsPage() {
         <div className="max-w-3xl mx-auto text-center">
           <Quote className="w-10 h-10 text-primary mx-auto mb-4" />
           <p className="italic text-xl text-primary font-semibold">
-            “Care with dignity, comfort at home.”
+            &ldquo;Care with dignity, comfort at home.&rdquo;
           </p>
           <p className="text-sm text-muted mt-2">
-            — Our Motto at Care Crest
+            &mdash; Our Motto at Care Crest
           </p>
         </div>
       </section>

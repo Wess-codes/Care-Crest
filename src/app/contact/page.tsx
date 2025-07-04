@@ -1,4 +1,3 @@
-// src/app/contact/page.tsx
 "use client";
 
 import { useState } from "react";
@@ -11,21 +10,19 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSent(true);
-
-    // You can later integrate real submission logic here
     setTimeout(() => setSent(false), 4000);
   };
 
   return (
-    <div className="w-full px-6 md:px-10 lg:px-20 py-16 bg-white">
+    <div className="w-full px-6 md:px-10 lg:px-20 py-16 bg-white font-sans">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <h1 className="text-4xl font-bold text-center mb-4 text-foreground">Contact Us</h1>
         <p className="text-center text-muted mb-12">
-          We'd love to hear from you! Reach us directly or send a quick message below.
+          We&apos;d love to hear from you! Reach us directly or send a quick message below.
         </p>
 
-        {/* Contact Info + Form */}
+        {/* Grid */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Contact Info */}
           <div className="space-y-4 text-muted text-sm">
@@ -73,13 +70,13 @@ export default function ContactPage() {
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                allowFullScreen={true}
+                allowFullScreen
                 loading="lazy"
               ></iframe>
             </div>
           </div>
 
-          {/* Form */}
+          {/* Contact Form */}
           <form onSubmit={handleSubmit} className="grid gap-4">
             <input
               type="text"
@@ -106,10 +103,9 @@ export default function ContactPage() {
               Send Message
             </button>
 
-            {/* Success Message */}
             {sent && (
               <p className="text-sm text-green-600 font-medium">
-                ✅ Your message has been sent! We'll get back to you shortly.
+                ✅ Your message has been sent! We&apos;ll get back to you shortly.
               </p>
             )}
           </form>

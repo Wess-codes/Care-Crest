@@ -8,7 +8,6 @@ import {
   Baby,
   AccessibilityIcon,
 } from "lucide-react";
-
 import Link from "next/link";
 
 const services = [
@@ -40,9 +39,9 @@ const services = [
 
 export default function ServicesPreview() {
   return (
-    <section className="bg-lightBlue py-24 px-6 md:px-10 lg:px-20 min-h-screen">
+    <section className="bg-lightBlue py-24 px-6 md:px-10 lg:px-20 font-sans">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12 text-foreground">
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12">
           Our Core Services
         </h2>
 
@@ -50,7 +49,7 @@ export default function ServicesPreview() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition text-center flex flex-col items-center gap-4"
+              className="p-8 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-200 text-center flex flex-col items-center gap-4"
             >
               {service.icon}
               <h3 className="text-lg font-semibold text-foreground">

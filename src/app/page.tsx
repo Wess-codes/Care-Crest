@@ -6,14 +6,12 @@ import CallToActionSection from "./components/home/ActionSection";
 
 export default function Home() {
   return (
-   <>
-   <div>
-    <HeroSection />
+    <main className="bg-white">
+      <HeroSection />
       <IntroSection />
       <ServicesPreview />
       <TestimonialOrVisualSection />
       <CallToActionSection />
-      </div>
-   </>
+    </main>
   );
 }
