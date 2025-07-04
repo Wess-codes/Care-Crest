@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section className="relative bg-white py-12 text-center">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 px-6 md:px-10 lg:px-20">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row-reverse items-center gap-10 px-6 md:px-10 lg:px-20">
 
         {/* Text */}
         <div className="text-center md:text-left max-w-xl">

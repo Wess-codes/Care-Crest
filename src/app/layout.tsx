@@ -5,6 +5,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import TopBar from "./components/layout/TopBar";
 
+// Load Google Fonts
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -15,9 +16,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Metadata with favicon
 export const metadata: Metadata = {
   title: "Care Crest - Home Health Services",
   description: "Compassionate care at home. Book trusted health services today.",
+  icons: {
+    icon: "/favicon.ico", // Ensure this file exists in your /public folder
+  },
 };
 
 export default function RootLayout({

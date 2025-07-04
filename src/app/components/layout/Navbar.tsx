@@ -2,10 +2,17 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => pathname === href;
+
+  const linkBaseClass = "transition hover:text-primary";
+  const activeClass = "text-primary font-semibold";
 
   return (
     <header className="bg-background shadow-md sticky top-0 z-50 font-sans">
@@ -21,10 +28,30 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6 text-foreground font-medium">
-          <Link href="/" className="hover:text-primary transition">Home</Link>
-          <Link href="/services" className="hover:text-primary transition">Services</Link>
-          <Link href="/about-us" className="hover:text-primary transition">About Us</Link>
-          <Link href="/blog" className="hover:text-primary transition">Blog</Link>
+          <Link
+            href="/"
+            className={`${linkBaseClass} ${isActive("/") ? activeClass : ""}`}
+          >
+            Home
+          </Link>
+          <Link
+            href="/services"
+            className={`${linkBaseClass} ${isActive("/services") ? activeClass : ""}`}
+          >
+            Services
+          </Link>
+          <Link
+            href="/about-us"
+            className={`${linkBaseClass} ${isActive("/about-us") ? activeClass : ""}`}
+          >
+            About Us
+          </Link>
+          <Link
+            href="/blog"
+            className={`${linkBaseClass} ${isActive("/blog") ? activeClass : ""}`}
+          >
+            Blog
+          </Link>
         </nav>
 
         {/* CTA Buttons (Desktop) */}
@@ -56,10 +83,34 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden px-6 pb-6 space-y-3 text-foreground font-medium">
-          <Link href="/" onClick={() => setIsOpen(false)} className="block">Home</Link>
-          <Link href="/services" onClick={() => setIsOpen(false)} className="block">Services</Link>
-          <Link href="/about-us" onClick={() => setIsOpen(false)} className="block">About Us</Link>
-          <Link href="/blog" onClick={() => setIsOpen(false)} className="block">Blog</Link>
+          <Link
+            href="/"
+            onClick={() => setIsOpen(false)}
+            className={`${linkBaseClass} ${isActive("/") ? activeClass : ""} block`}
+          >
+            Home
+          </Link>
+          <Link
+            href="/services"
+            onClick={() => setIsOpen(false)}
+            className={`${linkBaseClass} ${isActive("/services") ? activeClass : ""} block`}
+          >
+            Services
+          </Link>
+          <Link
+            href="/about-us"
+            onClick={() => setIsOpen(false)}
+            className={`${linkBaseClass} ${isActive("/about-us") ? activeClass : ""} block`}
+          >
+            About Us
+          </Link>
+          <Link
+            href="/blog"
+            onClick={() => setIsOpen(false)}
+            className={`${linkBaseClass} ${isActive("/blog") ? activeClass : ""} block`}
+          >
+            Blog
+          </Link>
           <Link
             href="/booking"
             onClick={() => setIsOpen(false)}
